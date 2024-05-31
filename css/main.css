@@ -494,6 +494,10 @@ section {
   margin-left: auto;
   margin-right: auto;
 }
+.who-we-are .img__logo {
+  width: 100%;
+  height: auto;
+}
 .who-we-are .img:hover {
   -webkit-transform: scale(1.1) rotate(15deg);
       -ms-transform: scale(1.1) rotate(15deg);
@@ -675,17 +679,29 @@ section {
   padding: 70px 80px;
 }
 .testimonials::after {
-  content: url("../assets/img/vector_2.png");
+  content: "";
   position: absolute;
-  left: 47%;
-  top: -6%;
-  -webkit-transform: rotate(316deg);
-      -ms-transform: rotate(316deg);
-          transform: rotate(316deg);
+  background-image: url("../assets/img/vector_2.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  z-index: 1;
+  width: 542px;
+  height: 342px;
+  left: 46%;
+  top: 11%;
+  -webkit-transform: rotate(340deg);
+      -ms-transform: rotate(340deg);
+          transform: rotate(340deg);
 }
 .testimonials::before {
-  content: url("../assets/img/vector.png");
+  content: "";
   position: absolute;
+  display: inline-block;
+  background-image: url("../assets/img/vector.png");
+  background-repeat: no-repeat;
+  z-index: 1;
+  width: 542px;
+  height: 342px;
   top: 15%;
   right: 55%;
   -webkit-transform: rotate(340deg);
@@ -727,12 +743,26 @@ section {
   border-radius: 5vmax;
   border: 1px solid #9C69E2;
   background-color: #fff;
-  z-index: 1;
+  z-index: 2;
 }
 .testimonials .reviews-cards .card_review .descr > .title-4 {
   color: #212353;
 }
 @media screen and (max-width: 1200px) {
+  .testimonials::after, .testimonials::before {
+    background-size: 60% auto;
+  }
+  .testimonials::after {
+    left: 40%;
+    top: 28%;
+    -webkit-transform: rotate(80deg);
+        -ms-transform: rotate(80deg);
+            transform: rotate(80deg);
+  }
+  .testimonials::before {
+    left: 5%;
+    top: 4%;
+  }
   .testimonials .reviews-cards {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
